@@ -2,8 +2,8 @@ import { Component } from "react";
 
 type Props = {
   title: string,
-  isHero: boolean
-}
+  isHero: boolean,
+};
 
 class Hello extends Component<Props> {
   constructor(props) {
@@ -14,14 +14,16 @@ class Hello extends Component<Props> {
   }
   render() {
     return (
-      <h1 class="no-unknown-property" font-size="24" onClick={() => console.log('Should not use bind in JSX props')}>
+      <h1
+        class="no-unknown-property"
+        font-size="24"
+        onClick={() => console.log("Should not use bind in JSX props")}
+      >
         <a href="javascript:void(0)">Unsafe Linking in React</a>
         {this.isTitleAvailable ? this.title : `Welcome to DeepSource`}
       </h1>
     );
   }
 }
-
-
 
 export default Hello;
